@@ -126,3 +126,35 @@
     white-space: pre;
   }
 }
+
+/* Marquee animation for header banner */
+@layer utilities {
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex; /* Ensure the content is in a single line */
+  animation: marquee 12s linear infinite;
+  animation-play-state: running;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused; /* Pause on hover to allow user to read */
+}
+
+
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-scroll {
+      animation-duration: 0s;
+      animation-play-state: paused;
+    }
+  }
+}

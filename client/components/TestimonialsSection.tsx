@@ -26,7 +26,9 @@ export default function TestimonialsSection() {
             Customer's Testimonials
           </h2>
           <p className="text-xl lg:text-[21px] font-medium text-black max-w-[860px] mx-auto leading-relaxed">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            Real experiences from people who trust CureMist for their everyday
+             first-aid needs. See how our fast-acting, Ayurvedic spray has helped
+              customers heal quicker, cleaner, and with complete convenience.
           </p>
         </div>
 
