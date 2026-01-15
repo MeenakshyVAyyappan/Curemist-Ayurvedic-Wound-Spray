@@ -1,60 +1,145 @@
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// Array of banners with image URL, title, description, and button text
+const BANNERS = [
+  {
+    image: "/banners/banner1.png",  // First banner image
+    title: "CureMist - Ayurvedic First Aid Wound Spray",
+    description: "Safe for all ages | AYUSH Certified |\n Patented Formula",
+    buttonText: "Shop Now",
+  },
+  {
+    image: "/banners/banner2.png",  // Second banner image
+    title: "Trusted by Over 500 + Families for Everyday Healing",
+    description: "From Kids Scrapes \nto daily first aid needs",
+    buttonText: "Shop Now",
+  },
+  {
+    image: "/banners/banner3.png",  // Third banner image
+    title: "Small Wounds Can Happen Anytime.",
+    description: "Curemist Combo Pack \nBuy 2 & save More",
+    buttonText: "Shop Now",
+  },
+];
+
 export default function Hero() {
+  const [currentBanner, setCurrentBanner] = useState(0);
+
+  // Automatically change the banner every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % BANNERS.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Navigate to previous banner
+  const prevBanner = () => {
+    setCurrentBanner((prev) => (prev - 1 + BANNERS.length) % BANNERS.length);
+  };
+
+  // Navigate to next banner
+  const nextBanner = () => {
+    setCurrentBanner((prev) => (prev + 1) % BANNERS.length);
+  };
+
+  // Function to change to a specific banner
+  const goToBanner = (index: number) => {
+    setCurrentBanner(index);
+  };
+
   return (
-    <section className="relative mt-[110px] md:mt-[145px] min-h-[500px] md:h-[650px] overflow-hidden bg-gradient-to-r from-[#E4E9FF] via-[#F0E9FF] to-[#FFE493]">
-      {/* Decorative Background Elements */}
-      <div className="absolute -left-3 top-8 w-[300px] md:w-[620px] h-[300px] md:h-[620px] opacity-10 md:opacity-20">
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/ba2e1889b8392e002bfd15fdf0cea6de115025c8?width=1240"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="absolute right-0 -top-5 w-[300px] md:w-[620px] h-[300px] md:h-[620px] opacity-10 md:opacity-20 -rotate-90">
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/3b5a9e87edd37f0aafc46f8a1857467ea697e659?width=1240"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+    <section className="relative mt-0 md:mt-0 min-h-[500px] md:h-[650px] overflow-hidden">
+      {/* Carousel Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {BANNERS.map((banner, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentBanner ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            {/* Background Image for Left Side */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${banner.image})`,
+                objectFit: "cover",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </div>
+        ))}
       </div>
 
+      {/* Content Overlay */}
       <div className="container mx-auto px-4 md:px-6 lg:px-24 h-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-4 md:gap-8 h-full items-center py-8 md:py-0">
-          {/* Left Content */}
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-4 h-full items-center py-8 md:py-0">
+          {/* Left Content (Remains the Same for All Banners) */}
           <div className="space-y-4 md:space-y-6 pt-4 md:pt-12 lg:pt-0">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-brand-blue leading-tight">
-              Cure <span className="font-extrabold">Mist – Ayurvedic <br />First Aid Wound Spray</span>
+            <h1 className="text-3xl sm:text-4xl md:text-xl lg:text-5xl font-bold text-brand-blue leading-tight">
+              {BANNERS[currentBanner].title}
             </h1>
-            <p className="text-lg md:text-2xl lg:text-[28px] font-medium text-black leading-snug">
-              Safe for all ages | AYUSH Certified | <br />Patented Formula
-            </p>
-            <button className="bg-brand-yellow hover:bg-brand-yellow/90 text-brand-blue px-6 md:px-12 py-3 md:py-4 rounded-lg text-base md:text-lg font-extrabold transition-colors w-full md:w-auto">
-              SHOP NOW
+           <h3 className="text-sm sm:text-lg md:text-xl lg:text-3xl font-medium text-black mx-auto">
+            {BANNERS[currentBanner].description}
+             </h3>
+
+            <button className="bg-brand-yellow hover:bg-brand-yellow/90 text-brand-blue px-6 md:px-12 py-3 md:py-4 rounded-lg text-base md:text-lg font-extrabold transition-colors">
+              {BANNERS[currentBanner].buttonText}
             </button>
-            
+
             {/* Badges */}
-            <div className="flex items-center gap-2 md:gap-4 pt-2 md:pt-4">
+            <div className="flex items-center gap-2 sm:gap-4 pt-2 md:pt-4">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/82119b11c278da0f612e9e4242c28c6418dceb6d?width=208"
+                src="/banners/element1.png"
                 alt="AYUSH Badge"
-                className="h-[35px] md:h-[51px] w-auto"
+                className="h-[30px] sm:h-[35px] md:h-[51px] w-auto"
               />
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/4e16c1ab10b1c06c84d315706b425936b476d508?width=162"
+                src="/banners/element2.png"
                 alt="Certification Badge"
-                className="h-[35px] md:h-[51px] w-auto"
+                className="h-[30px] sm:h-[35px] md:h-[51px] w-auto"
               />
             </div>
           </div>
-
-          {/* Right Image */}
-          <div className="relative hidden lg:block">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/eb8ce56e152a1e0671937ecb6b46dafe719a9482?width=950"
-              alt="Woman holding Cure Mist spray"
-              className="w-full max-w-[475px] h-auto ml-auto"
-            />
-          </div>
         </div>
+      </div>
+
+      {/* Left Arrow */}
+      <button
+        onClick={prevBanner}
+        className="absolute left-4 sm:left-6 top-1/2 transform -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg text-brand-blue transition-all hover:scale-110"
+        aria-label="Previous Banner"
+      >
+        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
+      </button>
+
+      {/* Right Arrow */}
+      <button
+        onClick={nextBanner}
+        className="absolute right-4 sm:right-6 top-1/2 transform -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg text-brand-blue transition-all hover:scale-110"
+        aria-label="Next Banner"
+      >
+        <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
+      </button>
+
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+        {BANNERS.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToBanner(index)}
+            className={`h-2 md:h-3 rounded-full transition-all duration-300 ${
+              index === currentBanner
+                ? "bg-brand-blue w-8 md:w-10"
+                : "bg-brand-blue/40 w-2 md:w-3 hover:bg-brand-blue/60"
+            }`}
+            aria-label={`Go to banner ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

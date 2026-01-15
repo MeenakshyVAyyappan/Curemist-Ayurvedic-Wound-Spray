@@ -158,3 +158,11 @@
     }
   }
 }
+
+/* For small screens (sm), set padding-top to 0 */
+@media (max-width: 639px) {
+  .testimonials {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

@@ -95,13 +95,23 @@ export default function Header() {
                 onClick={() => setShowProfileMenu(!showProfileMenu)}
                 className="flex items-center gap-0.5 md:gap-2 text-brand-blue text-xs md:text-sm font-medium hover:opacity-80"
               >
-                <Avatar>
-                  {user?.avatar && <AvatarImage src={user.avatar} alt={user.name} />}
-                  <AvatarFallback className="bg-brand-yellow text-brand-blue font-bold text-xs border-2 border-brand-blue rounded-full p-1 w-7 h-7 md:w-10 md:h-10">
-                    {user?.name?.slice(0,1).toUpperCase()}
-                  </AvatarFallback>
-                </Avatar>
-                <span className="hidden md:inline text-xs md:text-sm">My Profile</span>
+                <Avatar className="w-7 h-7 md:w-10 md:h-10">
+  {user?.avatar && (
+    <AvatarImage
+      src={user.avatar}
+      alt={user.name}
+      className="object-cover"
+    />
+  )}
+
+  <AvatarFallback
+    className="bg-brand-yellow text-brand-blue font-bold text-xs md:text-sm border-2 border-brand-blue rounded-full w-full h-full flex items-center justify-center box-border"
+  >
+    {user?.name?.slice(0, 1).toUpperCase()}
+  </AvatarFallback>
+</Avatar>
+
+                <span className="text-xs md:text-sm">My Profile</span>
               </button>
               
               {/* Dropdown Menu */}
@@ -134,7 +144,7 @@ export default function Header() {
       </div>
 
       {/* Render Profile Popup if visible */}
-       {showProfilePopup && <AuthPopup onClose={toggleProfilePopup} />}
+      {showProfilePopup && <AuthPopup onClose={toggleProfilePopup} />}
     </header>
   );
 }

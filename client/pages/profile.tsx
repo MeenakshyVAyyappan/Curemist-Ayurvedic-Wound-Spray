@@ -91,11 +91,11 @@ const Profile = () => {
               <div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
   {/* Profile Image Section */}
-  <div className="flex items-center gap-4 mb-0 lg:col-span-1">
-    <div className="w-24 h-24 rounded-full bg-muted flex items-center justify-center text-xl font-bold">
-      {user.name.slice(0, 1).toUpperCase()} {/* User's initials */}
-    </div>
-  </div>
+  <div className="flex justify-center lg:justify-start lg:col-span-1">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-muted flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">
+                      {user.name.slice(0, 1).toUpperCase()}
+                    </div>
+                  </div>
 
   {/* Input Fields (First Name, Last Name, Phone Number, Email) */}
   <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-3 mb-0">

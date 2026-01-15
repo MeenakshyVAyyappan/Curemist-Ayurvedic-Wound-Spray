@@ -18,8 +18,8 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white mt-24 md:mt-8">
-      <div className="container mx-auto px-4 md:px-6 lg:px-24 pt-4">
+    <section className="testimonials py-12 !sm:pt-0 md:py-20 bg-white mt-42 sm:mt-24 md:mt-8">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24 pt-4 md:mb-4">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-[34px] font-bold text-black mb-2 md:mb-4">

@@ -10,7 +10,8 @@ import Footer from "@/components/Footer";
 export default function Index() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <Header/>
+      <main className="pt-[110px] md:pt-[145px]">
       <Hero />
       <ProductSection />
       <FeatureSections />
@@ -18,6 +19,7 @@ export default function Index() {
       <TestimonialsSection />
       <FAQSection />
       <Footer />
+      </main>
     </div>
   );
 }
