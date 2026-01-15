@@ -18,14 +18,14 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-24">
+    <section className="py-12 md:py-20 bg-white mt-24 md:mt-8">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24 pt-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-[34px] font-bold text-black mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-[34px] font-bold text-black mb-2 md:mb-4">
             Customer's Testimonials
           </h2>
-          <p className="text-xl lg:text-[21px] font-medium text-black max-w-[860px] mx-auto leading-relaxed">
+          <p className="text-base md:text-xl lg:text-[21px] font-medium text-black max-w-[860px] mx-auto leading-relaxed px-2">
             Real experiences from people who trust CureMist for their everyday
              first-aid needs. See how our fast-acting, Ayurvedic spray has helped
               customers heal quicker, cleaner, and with complete convenience.
@@ -33,14 +33,14 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Testimonial Videos */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="relative">
               <div className="relative overflow-hidden rounded-lg">
                 <img
                   src={testimonial.image}
                   alt="Customer testimonial"
-                  className="w-full h-[290px] object-cover"
+                  className="w-full h-[250px] md:h-[290px] object-cover"
                 />
                 <div className="absolute inset-0 bg-black/30"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
                   </button>
                 </div>
               </div>
-              <p className="text-center text-xl font-semibold text-black mt-4">
+              <p className="text-center text-base md:text-xl font-semibold text-black mt-3 md:mt-4">
                 {testimonial.quote}
               </p>
             </div>

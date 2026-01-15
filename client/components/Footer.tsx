@@ -4,19 +4,19 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-yellow py-16 relative">
-      <div className="container mx-auto px-6 lg:px-24">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+    <footer className="bg-brand-yellow py-8 md:py-16 relative">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Logo and Address */}
           <div>
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/d73fc794110572fa295e54d871082a55e45fcda5?width=380"
               alt="Cure Mist Logo"
-              className="h-[62px] w-auto mb-6"
+              className="h-[50px] md:h-[62px] w-auto mb-4 md:mb-6"
             />
             <div className="space-y-2">
-              <p className="text-lg font-extrabold text-black">Altus Pharma</p>
-              <p className="text-base font-medium text-black leading-relaxed">
+              <p className="text-base md:text-lg font-extrabold text-black">Altus Pharma</p>
+              <p className="text-xs md:text-base font-medium text-black leading-relaxed">
                 13/223 B,C ,sukapuram Complex,<br />
                 Near Chambaramanam Temple Naduvattom,<br />
                 Sugapuram po, Edappal, Kerala 679576
@@ -28,22 +28,22 @@ export default function Footer() {
           <div className="hidden lg:block"></div>
 
           {/* Contact Information */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
+          <div className="space-y-4 md:space-y-6">
+            <div className="flex items-center gap-3 md:gap-4">
               <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
-                <FiPhone size={18} />
+                <FiPhone size={16} className="md:w-[18px] md:h-[18px]" />
               </span>
-              <span className="text-lg font-medium text-black">+91 88488 15296</span>
+              <span className="text-base md:text-lg font-medium text-black">+91 88488 15296</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 md:gap-4">
               <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
-                <FiMail size={18} />
+                <FiMail size={16} className="md:w-[18px] md:h-[18px]" />
               </span>
-              <span className="text-lg font-medium text-black">support@curemist.in</span>
+              <span className="text-base md:text-lg font-medium text-black">support@curemist.in</span>
             </div>
             <div>
-              <p className="text-base font-medium text-black mb-3">Follow us :</p>
-              <div className="flex items-center gap-3">
+              <p className="text-sm md:text-base font-medium text-black mb-2 md:mb-3">Follow us :</p>
+              <div className="flex items-center gap-2 md:gap-3">
                 <a href="#" className="hover:opacity-80 transition-opacity">
                   <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
                     <FaFacebookF size={16} />
@@ -65,11 +65,11 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-[#BE8F00] mb-8"></div>
+        <div className="h-px bg-[#BE8F00] mb-6 md:mb-8"></div>
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-lg font-medium text-black">
+          <p className="text-sm md:text-lg font-medium text-black">
             © 2025 Cure Mist. All rights reserved.
           </p>
         </div>
@@ -81,9 +81,9 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-8 right-8 z-50 hover:scale-110 transition-transform bg-[#25D366] text-white rounded-full p-3 shadow-lg"
+        className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 hover:scale-110 transition-transform bg-[#25D366] text-white rounded-full p-2 md:p-3 shadow-lg"
       >
-        <FaWhatsapp size={20} />
+        <FaWhatsapp size={20} className="md:w-[24px] md:h-[24px]" />
       </a>
     </footer>
   );

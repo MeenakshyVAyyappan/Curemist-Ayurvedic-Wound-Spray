@@ -52,9 +52,9 @@ const BlogDetail = () => {
       <Header />
       
       {/* Breadcrumb Section */}
-      <section className="bg-gradient-to-r from-[#F2B705] to-[#FFD147] py-6 px-4">
-        <div className="container mx-auto">
-          <BreadcrumbList className="mb-2">
+      <section className="bg-gradient-to-r from-[#F2B705] to-[#FFD147] py-4 md:py-6 px-4">
+        <div className="container mx-auto px-4 md:px-6 lg:px-24">
+          <BreadcrumbList className="mb-2 text-xs md:text-sm">
             {breadcrumbItems.map((b, idx) => (
               <BreadcrumbItem key={idx}>
                 {b.href ? (
@@ -70,15 +70,15 @@ const BlogDetail = () => {
         </div>
       </section>
 
-      <main className="flex-1 bg-background py-8 md:py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <main className="flex-1 bg-background py-6 md:py-8 lg:py-12">
+        <div className="container mx-auto px-4 md:px-6 lg:px-24 max-w-4xl">
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-curemist-purple text-center mb-8 leading-tight mt-8">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-curemist-purple text-center mb-6 md:mb-8 leading-tight mt-4 md:mt-8">
             {post.title}
           </h1>
 
           {/* Featured Image */}
-          <div className="aspect-video overflow-hidden rounded-lg mb-8">
+          <div className="aspect-video overflow-hidden rounded-lg mb-6 md:mb-8">
             <img 
               src={post.image} 
               alt={post.title}
@@ -87,8 +87,8 @@ const BlogDetail = () => {
           </div>
 
           {/* Meta Info */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-            <p className="text-sm font-medium text-blog-date">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 md:gap-4 mb-6 md:mb-8">
+            <p className="text-xs md:text-sm font-medium text-blog-date">
               {post.date}
             </p>
           </div>

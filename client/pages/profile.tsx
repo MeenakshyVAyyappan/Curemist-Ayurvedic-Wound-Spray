@@ -64,13 +64,13 @@ const Profile = () => {
   }
 
   return (
-    <div className="min-h-screen pt-[150px] bg-background">
-      <div className="container mx-auto px-6 lg:px-24">
+    <div className="min-h-screen pt-[110px] md:pt-[145px] bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24">
         <div className="mb-6">
-          <Button onClick={() => navigate('/')} className="bg-brand-yellow hover:bg-[#816306] text-[#311659]">Back to Home</Button>
+          <Button onClick={() => navigate('/')} className="bg-brand-yellow hover:bg-[#816306] text-[#311659] text-sm">Back to Home</Button>
         </div>
-        <div className="text-2xl font-bold text-curemist-purple mb-6">My Profile</div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="text-xl md:text-2xl font-bold text-curemist-purple mb-6">My Profile</div>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
           <aside className="lg:col-span-1">
             <nav className="flex flex-col space-y-2">
               {tabs.map((t, i) => (
@@ -89,16 +89,16 @@ const Profile = () => {
             {/* Profile Information Tab */}
             {active === 0 && (
               <div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
   {/* Profile Image Section */}
-  <div className="flex items-center gap-6 mb-6 lg:col-span-1">
+  <div className="flex items-center gap-4 mb-0 lg:col-span-1">
     <div className="w-24 h-24 rounded-full bg-muted flex items-center justify-center text-xl font-bold">
       {user.name.slice(0, 1).toUpperCase()} {/* User's initials */}
     </div>
   </div>
 
   {/* Input Fields (First Name, Last Name, Phone Number, Email) */}
-  <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+  <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-3 mb-0">
     <div className="flex flex-col">
       <label htmlFor="firstName" className="font-medium mb-1">First Name*</label>
       <input
@@ -138,7 +138,7 @@ const Profile = () => {
   </div>
 </div>
                 <div className="mb-6 display">
-                  <h3 className="font-bold mb-10 text-[#311659]">Change Password</h3>
+                  <h3 className="font-bold mb-4 text-[#311659]">Change Password</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="flex flex-col">
                 <label htmlFor="oldPassword" className="font-medium mb-1">Old Password*</label>
@@ -277,13 +277,6 @@ const Profile = () => {
                 )}
               </div>
             )}
-
-            {/* Logout Button at the bottom */}
-            <div className="mt-6">
-              <Button onClick={logout} className="bg-red-500 text-white hover:bg-red-600 px-6 py-3 rounded font-semibold">
-                Logout
-              </Button>
-            </div>
           </section>
         </div>
       </div>

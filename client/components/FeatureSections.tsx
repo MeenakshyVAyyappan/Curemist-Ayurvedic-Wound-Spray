@@ -6,63 +6,63 @@ const TurmericIcon = () => (
 
 export default function FeatureSections() {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#FFF1C5] via-[#FFE8A0] to-[#EDB200]">
-      <div className="container mx-auto px-6 lg:px-24 pt-[90px] pb-[70px]">
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-[#FFF1C5] via-[#FFE8A0] to-[#EDB200] mt-8 md:mt-0">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24 pt-4 md:pt-[90px] pb-48 md:pb-[70px]">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {/* Left Feature Card */}
-          <div className="bg-white rounded-lg p-8 lg:p-12 shadow-lg relative">
+          <div className="bg-white rounded-lg p-6 md:p-8 lg:p-12 shadow-lg relative">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e9e9563dd9f6f174b2d9cd188cb54791fb06328b?width=1110"
               alt="Ayurvedic herbs"
-              className="w-full h-[302px] object-cover rounded-lg mb-8 -mt-32"
+              className="w-full h-[200px] md:h-[250px] lg:h-[302px] object-cover rounded-lg mb-6 md:mb-8 -mt-24 md:-mt-32"
             />
-            <h3 className="text-4xl lg:text-[33px] font-extrabold text-black mb-6 leading-tight tracking-tight">
+            <h3 className="text-2xl md:text-3xl lg:text-[33px] font-extrabold text-black mb-4 md:mb-6 leading-tight tracking-tight">
               World's First Ayurvedic <br />Wound Care Innovation
             </h3>
-            <p className="text-xl lg:text-[21px] font-medium text-black mb-6 leading-relaxed">
+            <p className="text-base md:text-xl lg:text-[21px] font-medium text-black mb-4 md:mb-6 leading-relaxed">
               A breakthrough in wound care that blends the wisdom of Ayurveda with modern science.
             </p>
             
-            <div className="space-y-3 mb-6">
+            <div className="space-y-2 md:space-y-3 mb-6">
               {[
                 "100% Ayurvedic | AYUSH Approved",
                 "Patented Formula by Indian Scientists",
                 "Powered by the natural strength of Turmeric",
                 "Dermatologically Tested for safety"
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <div key={index} className="flex items-start gap-2 md:gap-3">
                   <div className="mt-1 flex-shrink-0">
                     <TurmericIcon />
                   </div>
-                  <p className="text-lg font-semibold text-black">{feature}</p>
+                  <p className="text-base md:text-lg font-semibold text-black">{feature}</p>
                 </div>
               ))}
             </div>
 
             <div className="pt-4 border-t border-gray-200">
-              <h4 className="text-xl font-bold text-black mb-2">Why it Matters:</h4>
-              <p className="text-lg font-medium text-black leading-relaxed">
+              <h4 className="text-lg md:text-xl font-bold text-black mb-2">Why it Matters:</h4>
+              <p className="text-base md:text-lg font-medium text-black leading-relaxed">
                 Traditional healing meets advanced technology to give Indian families a safer, faster, and more reliable first-aid solution.
               </p>
             </div>
           </div>
 
           {/* Right Feature Card */}
-          <div className="bg-white rounded-lg p-8 lg:p-12 shadow-lg relative">
+          <div className="bg-white rounded-lg p-6 md:p-8 lg:p-12 shadow-lg relative">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/0263052fb4b49a7116226930f162e800c22bfd7e?width=1110"
               alt="Wound protection"
-              className="w-full h-[302px] object-cover rounded-lg mb-8 -mt-32"
+              className="w-full h-[200px] md:h-[250px] lg:h-[302px] object-cover rounded-lg mb-6 md:mb-8 -mt-24 md:-mt-32"
             />
-            <h3 className="text-4xl lg:text-[33px] font-extrabold text-black mb-6 leading-tight tracking-tight">
+            <h3 className="text-2xl md:text-3xl lg:text-[33px] font-extrabold text-black mb-4 md:mb-6 leading-tight tracking-tight">
               Advanced Protection. <br />Faster Healing. Zero Hassle.
             </h3>
-            <p className="text-xl lg:text-[21px] font-medium text-black mb-6 leading-relaxed">
+            <p className="text-base md:text-xl lg:text-[21px] font-medium text-black mb-4 md:mb-6 leading-relaxed">
               Smart Healing Technology Inside.<br />
               Designed for modern lifestyles, Cure Mist works instantly—without touch.
             </p>
             
-            <div className="space-y-3">
+            <div className="space-y-2 md:space-y-3">
               {[
                 { text: "Quick-Drying Technology", sub: "(Dries in under 1 minute)" },
                 { text: "Forms a Waterproof & Dustproof", sub: "Protective Film" },
@@ -70,11 +70,11 @@ export default function FeatureSections() {
                 { text: "Reduced Scarring Technology, especially", sub: "for burn wounds" },
                 { text: "3 Years Medicine Strength before Expiry", sub: "" }
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <div key={index} className="flex items-start gap-2 md:gap-3">
                   <div className="mt-1 flex-shrink-0">
                     <TurmericIcon />
                   </div>
-                  <p className="text-lg font-semibold text-black leading-tight">
+                  <p className="text-base md:text-lg font-semibold text-black leading-tight">
                     {feature.text}{feature.sub && <><br /><span className="font-semibold">{feature.sub}</span></>}
                   </p>
                 </div>

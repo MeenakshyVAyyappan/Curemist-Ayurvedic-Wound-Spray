@@ -38,20 +38,20 @@ export default function ProductSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-24">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-[34px] font-bold text-black mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-[34px] font-bold text-black mb-2 md:mb-4">
             Most Trusted Wound Care Sprays
           </h2>
-          <p className="text-xl lg:text-[21px] font-medium text-black max-w-[813px] mx-auto leading-relaxed">
+          <p className="text-base md:text-xl lg:text-[21px] font-medium text-black max-w-[813px] mx-auto leading-relaxed px-2">
             Fast relief for sports injuries & active lifestyles. Protects and heals scrapes, turf burns & workout wounds instantly.
           </p>
         </div>
 
         {/* Product Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12">
           {products.map((product, index) => (
             <ProductCard
               key={index}

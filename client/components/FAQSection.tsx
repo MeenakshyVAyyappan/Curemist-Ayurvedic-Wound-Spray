@@ -95,37 +95,39 @@ export default function FAQSection() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-24">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-[34px] font-bold text-black mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-[34px] font-bold text-black mb-2 md:mb-4">
             FAQ's
           </h2>
-          <p className="text-xl lg:text-[21px] font-medium text-black max-w-[860px] mx-auto leading-relaxed">
+          <p className="text-base md:text-xl lg:text-[21px] font-medium text-black max-w-[860px] mx-auto leading-relaxed px-2">
             Have questions about CureMist? Find quick and clear answers to help you understand how our spray works, how to use it, and why it’s the smarter choice for instant first-aid care.
           </p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="max-w-[1030px] mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-2 md:space-y-4">
             {faqs.slice(0, showAll ? faqs.length : 4).map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-[#DFDFDF] rounded-lg bg-white px-8 py-4 shadow-sm hover:shadow-md transition-shadow"
+                className="border border-[#DFDFDF] rounded-lg bg-white px-3 md:px-8 py-3 md:py-4 shadow-sm hover:shadow-md transition-shadow"
               >
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <div className="flex items-center gap-6 w-full">
-                    <QuestionIcon />
-                    <span className="text-xl font-semibold text-black">
+                  <div className="flex items-center gap-2 md:gap-6 w-full">
+                    <div className="flex-shrink-0 hidden md:block">
+                      <QuestionIcon />
+                    </div>
+                    <span className="text-base md:text-xl font-semibold text-black">
                       {faq.question}
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pt-4 pl-16">
-                  <p className="text-lg font-medium text-black leading-relaxed">
+                <AccordionContent className="pt-3 md:pt-4 pl-0 md:pl-16">
+                  <p className="text-base md:text-lg font-medium text-black leading-relaxed">
                     {faq.answer}
                   </p>
                 </AccordionContent>
@@ -135,10 +137,10 @@ export default function FAQSection() {
 
           {/* View More/Less Button */}
           {faqs.length > 4 && (
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 md:mt-8">
               <button
                 onClick={() => setShowAll((s) => !s)}
-                className="bg-[#E4E9FF] hover:bg-[#E4E9FF]/80 text-black px-8 py-2 rounded-md text-sm font-bold transition-colors"
+                className="bg-[#E4E9FF] hover:bg-[#E4E9FF]/80 text-black px-6 md:px-8 py-2 rounded-md text-sm font-bold transition-colors"
               >
                 {showAll ? "VIEW LESS" : "VIEW MORE"}
               </button>
