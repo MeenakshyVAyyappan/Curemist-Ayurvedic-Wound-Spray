@@ -1,13 +1,13 @@
-// Preloader.tsx
-import React from 'react';
-import './Preloader.css'; // Import the CSS file for any additional styling
+import "./Preloader.css";
 
-const Preloader: React.FC = () => {
+export default function Preloader() {
   return (
     <div className="preloader-container">
-      <img src="/Preloader/preloader.png" alt="Loading..." className="loader-image" />
+      <img
+        src="/Preloader/preloader.png"
+        alt="Loading"
+        className="loader-image"
+      />
     </div>
   );
-};
-
-export default Preloader;
+}
