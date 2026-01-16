@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Logo and Address */}
           <div>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/d73fc794110572fa295e54d871082a55e45fcda5?width=380"
+              src="/public/Logo.png"
               alt="Cure Mist Logo"
               className="h-[50px] md:h-[62px] w-auto mb-4 md:mb-6"
             />
@@ -30,26 +30,30 @@ export default function Footer() {
           {/* Contact Information */}
           <div className="space-y-4 md:space-y-6">
             <div className="flex items-center gap-3 md:gap-4">
-              <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
-                <FiPhone size={16} className="md:w-[18px] md:h-[18px]" />
-              </span>
-              <span className="text-base md:text-lg font-medium text-black">+91 88488 15296</span>
+              <a href="tel:+918848815296" className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
+              <FiPhone size={16} className="md:w-[18px] md:h-[18px]" />
+               </a>
+              <a href="tel:+918848815296" className="text-base md:text-lg font-medium text-black">
+               +91 88488 15296
+               </a>
             </div>
             <div className="flex items-center gap-3 md:gap-4">
-              <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
-                <FiMail size={16} className="md:w-[18px] md:h-[18px]" />
-              </span>
-              <span className="text-base md:text-lg font-medium text-black">support@curemist.in</span>
+              <a href="mailto:contact@altuspharma.in" className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
+               <FiMail size={16} className="md:w-[18px] md:h-[18px]" />
+               </a>
+               <a href="mailto:contact@altuspharma.in" className="text-base md:text-lg font-medium text-black">
+               contact@altuspharma.in
+               </a>
             </div>
             <div>
               <p className="text-sm md:text-base font-medium text-black mb-2 md:mb-3">Follow us :</p>
               <div className="flex items-center gap-2 md:gap-3">
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="https://www.facebook.com/share/1aPSJ1o8UQ/?mibextid=wwXIfr" className="hover:opacity-80 transition-opacity">
                   <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
                     <FaFacebookF size={16} />
                   </span>
                 </a>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="https://www.instagram.com/curemist_official?igsh=YzNqZmtweTR4MWpt&utm_source=qr" className="hover:opacity-80 transition-opacity">
                   <span className="inline-flex items-center justify-center bg-brand-blue text-white rounded-full p-2">
                     <FaInstagram size={16} />
                   </span>
