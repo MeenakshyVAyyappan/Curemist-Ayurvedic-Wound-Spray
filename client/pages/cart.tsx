@@ -19,6 +19,7 @@ export default function CartPage() {
   };
 
   const totalPayable = subtotal - discountAmount;
+  
 
   return (
     <div className="min-h-screen pt-[110px] md:pt-[145px] bg-background">
@@ -37,7 +38,18 @@ export default function CartPage() {
             {items.length === 0 ? (
               <div className="py-20 text-center">
                 <p className="text-lg">Your cart is empty.</p>
-                <Link to="/" className="inline-block mt-4 bg-brand-yellow px-6 py-3 rounded text-brand-blue font-bold">Go Shopping</Link>
+                <button
+                onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                const el = document.getElementById("products");
+                el?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+                }}
+                className="inline-block mt-4 bg-brand-yellow px-6 py-3 rounded text-brand-blue font-bold">
+                Go Shopping
+                </button>
+
               </div>
             ) : (
               <div className="space-y-4 md:space-y-6">

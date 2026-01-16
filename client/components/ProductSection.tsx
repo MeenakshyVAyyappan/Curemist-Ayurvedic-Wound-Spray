@@ -38,7 +38,7 @@ export default function ProductSection() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section id="products" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-24">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">

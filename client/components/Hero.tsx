@@ -88,7 +88,13 @@ export default function Hero() {
               {BANNERS[currentBanner].description}
             </h3>
 
-            <button className="bg-brand-yellow hover:bg-brand-yellow/90 text-brand-blue px-6 md:px-12 py-3 md:py-4 rounded-lg text-base md:text-lg font-extrabold transition-colors">
+            <button 
+                 onClick={() => {
+                 document.getElementById("products")?.scrollIntoView({
+                 behavior: "smooth",
+              });
+              }}
+            className="bg-brand-yellow hover:bg-brand-yellow/90 text-brand-blue px-6 md:px-12 py-3 md:py-4 rounded-lg text-base md:text-lg font-extrabold transition-colors">
               {BANNERS[currentBanner].buttonText}
             </button>
 
