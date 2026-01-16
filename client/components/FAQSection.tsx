@@ -95,7 +95,7 @@ export default function FAQSection() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-12 md:py-20 lg:py-0 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-24">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
@@ -137,7 +137,7 @@ export default function FAQSection() {
 
           {/* View More/Less Button */}
           {faqs.length > 4 && (
-            <div className="flex justify-center mt-6 md:mt-8">
+            <div className="flex justify-center lg:mt-6 lg:py-8 md:mt-8">
               <button
                 onClick={() => setShowAll((s) => !s)}
                 className="bg-[#E4E9FF] hover:bg-[#E4E9FF]/80 text-black px-6 md:px-8 py-2 rounded-md text-sm font-bold transition-colors"

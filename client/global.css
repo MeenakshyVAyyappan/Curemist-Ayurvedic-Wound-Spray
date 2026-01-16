@@ -166,3 +166,23 @@
     padding-bottom: 0 !important;
   }
 }
+
+
+
+
+
+/* mobile faq button */
+@media (max-width: 768px) {
+  .flex.justify-center.lg\:mt-6.lg\:py-8.md\:mt-8 {
+    padding-top: 25px !important;
+}
+}
+/* mobile banner description */
+@media (max-width: 768px) {
+  h3.text-sm.sm\:text-lg.md\:text-xl.lg\:text-3xl.font-medium.text-black.mx-auto {
+    display: none !important;
+}
+  h1.text-3xl.md\:text-xl.sm\:text-4xl.lg\:text-5xl.font-bold.text-brand-blue.leading-tight {
+   font-size: 32px !important; 
+}
+}

@@ -11,7 +11,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       <Header/>
-      <main className="pt-[110px] md:pt-[145px]">
+      <main className="pt-[110px] md:pt-[100px]">
       <Hero />
       <ProductSection />
       <FeatureSections />

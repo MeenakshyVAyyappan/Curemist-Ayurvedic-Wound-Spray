@@ -7,14 +7,14 @@ const TurmericIcon = () => (
 export default function FeatureSections() {
   return (
     <section className="py-12 md:py-20 bg-gradient-to-br from-[#FFF1C5] via-[#FFE8A0] to-[#EDB200] mt-8 md:mt-0">
-      <div className="container mx-auto px-4 md:px-6 lg:px-24 pt-4 md:pt-[90px] pb-48 md:pb-[70px]">
+      <div className="container mx-auto px-4 md:px-6 lg:px-24 pt-4 md:pt-[90px] pb-0 md:pb-[70px]">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {/* Left Feature Card */}
           <div className="bg-white rounded-lg p-6 md:p-8 lg:p-12 shadow-lg relative">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/e9e9563dd9f6f174b2d9cd188cb54791fb06328b?width=1110"
               alt="Ayurvedic herbs"
-              className="w-full h-[200px] md:h-[250px] lg:h-[302px] object-cover rounded-lg mb-6 md:mb-8 -mt-24 md:-mt-32"
+              className="w-full h-[200px] md:h-[250px] lg:h-[302px] object-cover rounded-lg mb-6 md:mb-8 -mt-0 md:-mt-32"
             />
             <h3 className="text-2xl md:text-3xl lg:text-[33px] font-extrabold text-black mb-4 md:mb-6 leading-tight tracking-tight">
               World's First Ayurvedic <br />Wound Care Innovation
@@ -52,7 +52,7 @@ export default function FeatureSections() {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/0263052fb4b49a7116226930f162e800c22bfd7e?width=1110"
               alt="Wound protection"
-              className="w-full h-[200px] md:h-[250px] lg:h-[302px] object-cover rounded-lg mb-6 md:mb-8 -mt-24 md:-mt-32"
+              className="w-full h-[200px] md:h-[250px] lg:h-[302px] object-cover rounded-lg mb-6 md:mb-8 -mt-0 md:-mt-32"
             />
             <h3 className="text-2xl md:text-3xl lg:text-[33px] font-extrabold text-black mb-4 md:mb-6 leading-tight tracking-tight">
               Advanced Protection. <br />Faster Healing. Zero Hassle.
