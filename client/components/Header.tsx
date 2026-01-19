@@ -64,8 +64,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center flex-shrink-0">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/be98dd27d5fc46f36a990500215b312b985d0f4e?width=380"
-            alt="Cure Mist Logo"
+            src="/public/Logo.png"
             className="h-[35px] md:h-[62px] w-auto"
           />
         </Link>
