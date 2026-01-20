@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
+
 export default function Index() {
   return (
     <div className="min-h-screen bg-white">
